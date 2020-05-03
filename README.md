@@ -22,7 +22,7 @@
 　　→３つのコンテナ名が表示されればOK
 
 ・dockerの設定ができているか確認<br>
-　http://localhost:8080/<br>
+　localhost:8080<br>
 　　→上記をWebで叩いて、LaravelのTop画面が表示されればdockerの設定はOK
 
 ・mysqlのコンテナに入る<br>
