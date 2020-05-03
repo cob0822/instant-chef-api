@@ -47,7 +47,7 @@
 
 ・権限を確認<br>
 　show grants for 作成したユーザー名’;<br>
-　（GRANT SELECT, INSERT, UPDATE, DELETE ON `laravel`.* TO 'ssy’@‘%’　　が表示されていればOK）
+　（GRANT SELECT, INSERT, UPDATE, DELETE ON `laravel`.* TO '作成したユーザー名’@‘%’　　が表示されていればOK）
 
 　※mysqlをCUIで使う場合のコマンド<br>
 　　show databases; で表示されるDBの内、 ‘laravel’ が今回開発で使用するDB<br>
