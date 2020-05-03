@@ -21,7 +21,9 @@
 　$ docker ps
 　　→３つのコンテナ名が表示されればOK
 
-・WebでURL　http://localhost:8080/　を叩いてLaravelのTop画面が表示されれば、dockerの設定はOK
+・dockerの設定ができているか確認
+　http://localhost:8080/
+　　→上記をWebで叩いて、LaravelのTop画面が表示されればdockerの設定はOK
 
 ・mysqlのコンテナに入る<br>
 　$ docker exec -it mysql bash
