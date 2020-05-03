@@ -49,10 +49,10 @@
 ・作成したユーザーでmysqlにログイン
 
 ・作成したユーザーにCRUD権限を付与<br>
-　GRANT SELECT,INSERT,UPDATE,DELETE ON laravel.* TO ‘作成したユーザー名’@‘%’;
+　$ GRANT SELECT,INSERT,UPDATE,DELETE ON laravel.* TO ‘作成したユーザー名’@‘%’;
 
 ・権限を確認<br>
-　show grants for 作成したユーザー名’;<br>
+　$ show grants for 作成したユーザー名’;<br>
 　（GRANT SELECT, INSERT, UPDATE, DELETE ON `laravel`.* TO '作成したユーザー名’@‘%’　　が表示されていればOK）
 
 　※mysqlをCUIで使う場合のコマンド<br>
