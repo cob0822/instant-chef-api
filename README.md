@@ -25,6 +25,12 @@
 　localhost:8080<br>
 　　→上記をWebで叩いて、LaravelのTop画面が表示されればdockerの設定はOK
 
+・laravelのコンテナに入る<br>
+　$ docker exec -it laravel bash
+
+・マイグレーションファイルの実行<br>
+　$ php artisan migrate
+ 
 ・mysqlのコンテナに入る<br>
 　$ docker exec -it mysql bash
 
