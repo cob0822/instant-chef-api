@@ -1,7 +1,7 @@
 ▪️バックエンド環境構築手順
 
 ・適宜ローカル環境にDocker for macをインストールする<br>
-　手順は割愛するが、docker -v と docker-compose -v  でそれぞれバージョンが表示されればOK
+　手順は割愛するが、$ docker -v と $ docker-compose -v  でそれぞれバージョンが表示されればOK
 
 ・/user/projects　など適当なプロジェクト用のディレクトリを作成する
 
