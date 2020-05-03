@@ -15,7 +15,7 @@
 ・/src/.env.exampleの内容をコピー
 
 ・ローカルに/src/.envファイルを作成して、/src/.env.exampleの内容をペースト<br>
-※ファイル名頭に必ず'.'を付ける
+　※ファイル名頭に必ず'.'を付ける
 
 ・dockerのコンテナを立ち上げる<br>
 　$ docker-compose up -d
