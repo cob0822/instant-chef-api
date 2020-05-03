@@ -26,11 +26,11 @@ $ docker ps
 $ docker exec -it mysql bash
 
 ・管理者権限でmysql接続
-# mysql -u root -p
+$ mysql -u root -p
 パスワード：blahblah
 
 ・mysql接続用のユーザーを自分の開発環境DBに作成する（以降、管理者権限でログインはしないこと）
-# CREATE USER ‘任意のユーザー名’ IDENTIFIED BY ‘任意のパスワード’;
+$ CREATE USER ‘任意のユーザー名’ IDENTIFIED BY ‘任意のパスワード’;
 
 ※以降、以下の手順でmysqlにログインする
 ①docker exec -it mysql bash
