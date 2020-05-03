@@ -18,7 +18,7 @@
 　※今回はPHP、Nginx（Webサーバー）、MYSQL用のコンテナを作成した
 
 ・コンテナが立ち上がったか確認<br>
-　$ docker ps
+　$ docker ps<br>
 　　→３つのコンテナ名が表示されればOK
 
 ・dockerの設定ができているか確認<br>
