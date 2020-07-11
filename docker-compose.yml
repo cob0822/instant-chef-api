@@ -8,6 +8,7 @@ services:
     container_name: php
     volumes:
       - ./src:/var/www/html
+      - ../client/dist:/var/www/html/public/dist
     ports:
       - "9000:9000"
   mysql:
@@ -28,6 +29,7 @@ services:
       - "8080:80"
     volumes:
       - ./src:/var/www/html
+      - ../client/dist:/var/www/html/public/dist
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
     depends_on:
       - php
