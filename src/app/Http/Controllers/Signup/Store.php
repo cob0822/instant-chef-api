@@ -8,7 +8,7 @@ use App\Http\Requests\Signup\StoreRequest;
 use App\Models\User;
 use App\UseCases\Signup\CreateUsecase;
 use Illuminate\Http\Request;
-use Illuminate\Hashing\hashManager;
+use Illuminate\Hashing\HashManager;
 
 class Store extends Controller
 {
