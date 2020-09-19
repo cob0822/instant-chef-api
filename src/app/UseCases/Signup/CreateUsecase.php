@@ -3,8 +3,8 @@
 namespace App\UseCases\Signup;
 
 use App\Database\Commands\Save;
-// use App\Http\Resources\UserResource;
-use App\Models\User;
+use Illuminate\Http\Request;
+use App\User;
 use Throwable;
 
 class CreateUsecase
@@ -22,13 +22,41 @@ class CreateUsecase
     }
 
     /**
-     * @param User $user
+     * @param Request $request
      * @return UserResource
      * @throws Throwable
      */
-    public function invoke(User $user)
+    public function create(Request $request)
     {
+        $request = $request->userInput;
+        $name = $request['name'];
+        $email = $request['email'];
+        $phone_number = $request['phone_number'];
+        $password = $request['password'];
+        $user = new User([
+            'name' => $name,
+            'email' => $email,
+            'phone_number' => $phone_number,
+            'password' => bcrypt($password),
+        ]);
+
         $this->save->execute($user);
-        // return new UserResources($user);
+        return $this->publishToken($email, $password);
+    }
+
+    protected function publishToken($email, $password)
+    {
+        $token = auth('api')->attempt(['email' => $email, 'password' => $password]);
+        return $this->respondWithToken($token);
+    }
+
+    protected function respondWithToken($token)
+    {
+        return response()->json([
+            'access_token' => $token,
+            'token_type' => 'bearer',
+            'expires_in' => auth('api')->factory()->getTTL() * 60,
+            'user' => auth('api')->user(),
+        ]);
     }
 }

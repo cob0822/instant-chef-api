@@ -1,14 +1,12 @@
 <?php
 
-namespace App\Models;
+namespace App;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Tymon\JWTAuth\Contracts\JWTSubject;
 
-
-// ログイン周りでApp\Userが必要なので中身同様のApp\Userが存在している
 class User extends Authenticatable implements JWTSubject
 {
     use Notifiable;

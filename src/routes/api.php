@@ -13,10 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::middleware('auth:api')->group(function () {
-// Route::prefix('api')->group(function () {
-    // return $request->user();
+Route::middleware(['middleware' => 'guest:api'])->group(function () {
+    Route::prefix('auth')->namespace('Auth')->group(function () {
+        Route::post('login', 'login@Login');
+    });
     Route::prefix('signup')->namespace('Signup')->group(function () {
         Route::post('/', 'Store');
     });
-// });
+});
+
