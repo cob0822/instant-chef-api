@@ -22,3 +22,16 @@ Route::middleware(['middleware' => 'guest:api'])->group(function () {
     });
 });
 
+// 認証せずに使用できるAPI
+Route::middleware('api')->group(function () {
+    Route::prefix('orders')->namespace('Order')->group(function () {
+        Route::prefix('genres')->namespace('Genre')->group(function () {
+            Route::get('/', 'Index');
+        });
+    });
+});
+
+// 認証後に使用できるAPI
+Route::middleware('auth:api')->group(function () {
+    //
+});
