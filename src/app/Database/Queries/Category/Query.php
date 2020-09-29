@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Database\Queries\Genre;
+namespace App\Database\Queries\Category;
 
 use App\Models\Category;
 
 /**
  * Class Query
- * @package App\Database\Queries\Genre
+ * @package App\Database\Queries\Category
  */
 abstract class Query
 {
