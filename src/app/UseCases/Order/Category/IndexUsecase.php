@@ -1,9 +1,9 @@
 <?php
 
-namespace App\UseCases\Order\Genre;
+namespace App\UseCases\Order\Category;
 
 use Illuminate\Http\Request;
-use App\Database\Queries\Genre\FindByKeyword;
+use App\Database\Queries\Category\FindByKeyword;
 use App\Http\Resources\CategoryResource;
 use App\Models\Order;
 use Throwable;

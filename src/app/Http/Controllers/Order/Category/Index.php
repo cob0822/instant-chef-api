@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\Order\Genre;
+namespace App\Http\Controllers\Order\Category;
 
 use App\Http\Controllers\Controller;
-use App\UseCases\Order\Genre\IndexUsecase;
+use App\UseCases\Order\Category\IndexUsecase;
 use Illuminate\Http\Request;
 
 class Index extends Controller
@@ -22,7 +22,7 @@ class Index extends Controller
 
     /**
      * @param Request $request
-     * @return GenreResource
+     * @return CategoryResource
      * @throws Throwable
      */
     public function __invoke(Request $request)

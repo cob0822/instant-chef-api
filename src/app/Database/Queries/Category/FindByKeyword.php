@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Database\Queries\Genre;
+namespace App\Database\Queries\Category;
 
 use App\Models\Category;
 use Illminate\Database\Eloquent\Collection;
