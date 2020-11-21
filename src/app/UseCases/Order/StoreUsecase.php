@@ -44,7 +44,7 @@ class StoreUsecase
         if ($request['categories']) {
             foreach ($request['categories'] as $category) {
                 $order->categories()->attach([
-                    'category_id' => $category,
+                    'category_id' => $category['id'],
                 ]);
             }
         }
