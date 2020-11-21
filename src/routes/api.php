@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware(['middleware' => 'guest:api'])->group(function () {
     Route::prefix('auth')->namespace('Auth')->group(function () {
-        Route::post('login', 'login@Login');
+        Route::post('login', 'AuthController@login');
     });
     Route::prefix('signup')->namespace('Signup')->group(function () {
         Route::post('/', 'Store');
@@ -24,7 +24,7 @@ Route::middleware(['middleware' => 'guest:api'])->group(function () {
 
 // 認証せずに使用できるAPI
 Route::middleware('api')->group(function () {
-    Route::prefix('orders')->namespace('Order')->group(function () {
+    Route::prefix('orders')->namespace('Order')->group(function () {\
         Route::prefix('categories')->namespace('Category')->group(function () {
             Route::get('/', 'Index');
         });
@@ -33,5 +33,8 @@ Route::middleware('api')->group(function () {
 
 // 認証後に使用できるAPI
 Route::middleware('auth:api')->group(function () {
-    //
+    Route::get('/me', 'AuthController@me');
+    Route::prefix('orders')->namespace('Order')->group(function () {
+        Route::post('/', 'Store');
+    });
 });

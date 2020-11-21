@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+// use App\Models\Order;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
@@ -16,7 +17,7 @@ class Category extends Model
      */
     public function orders()
     {
-        return $this->belongsToMany(Order::class);
+        return $this->belongsToMany(Order::class, 'order_category');
     }
 
     /**
