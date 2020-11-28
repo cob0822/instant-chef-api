@@ -53,7 +53,7 @@ class CreateUsecase
     protected function respondWithToken($token)
     {
         return response()->json([
-            'user' => auth('api')->user(),
+            auth('api')->user(),
         ])
         ->withHeaders([
             'access_token' => $token,
