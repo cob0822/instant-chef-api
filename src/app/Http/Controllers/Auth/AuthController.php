@@ -78,9 +78,9 @@ class AuthController extends Controller
      */
     protected function respondWithToken($token)
     {
-        return response()->json([
+        return response()->json(
             auth('api')->user(),
-        ])
+        )
         ->withHeaders([
             'access_token' => $token,
             'token_type' => 'bearer',
