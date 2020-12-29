@@ -29,7 +29,11 @@ class OrderResource extends Resource
             'description' => $this->resource->description,
             'desired_date' => $this->resource->desired_date,
             'cooking_frequency' => $this->resource->cooking_frequency,
-            'desired_cooking_time' => $this->resource->desired_cooking_time,
+            'creation_time' => $this->resource->desired_cooking_time,
+            // 以下のデータが取れない
+            'categories' => $this->resource->categories()->get(),
+            'tool' => $this->resource->tools()->get(),
+            'ingredients' => $this->resource->ingredients()->get(),
         ];
     }
 }
