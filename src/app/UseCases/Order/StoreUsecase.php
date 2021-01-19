@@ -35,9 +35,9 @@ class StoreUsecase
             'user_id' => \Auth::user()->id,
             'name' => $request['name'],
             'description' => $request['description'],
-            'desired_date' => $request['date'],
+            'desired_date' => $request['desired_date'],
             'cooking_frequency' => $request['cooking_frequency'],
-            'desired_cooking_time' => $request['creation_time'],
+            'desired_cooking_time' => $request['desired_cooking_time'],
         ]);
         $order = $this->save->execute($order);
 

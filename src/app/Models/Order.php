@@ -4,6 +4,7 @@ namespace App\Models;
 
 // use App\Models\Category;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Order extends Model
@@ -16,6 +17,14 @@ class Order extends Model
         'cooking_frequency',
         'desired_cooking_time',
     ];
+
+    /**
+     * @return BelongsTo
+     */
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
 
     /**
      * @return BelongsToMany

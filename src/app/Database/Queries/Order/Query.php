@@ -11,7 +11,10 @@ use App\Models\Order;
 abstract class Query
 {
     /** @var array */
-    private const DEFAULT_WITH = [];
+    private const DEFAULT_WITH = [
+        'user',
+        'categories',
+    ];
 
     /**
      * @param array $with

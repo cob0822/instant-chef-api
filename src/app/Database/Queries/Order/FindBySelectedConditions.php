@@ -17,7 +17,8 @@ class FindBySelectedConditions extends Query
     {
         return $this
             ->getOrder()
-            ->get()
+            ->orderBy('updated_at', 'desc')
+            ->paginate(50)
             ;
     }
 }

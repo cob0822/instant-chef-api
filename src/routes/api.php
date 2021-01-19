@@ -36,6 +36,7 @@ Route::middleware('api')->group(function () {
 Route::middleware('auth:api')->group(function () {
     Route::get('/me', 'AuthController@me');
     Route::prefix('orders')->namespace('Order')->group(function () {
+        Route::get('/', 'Index');
         Route::post('/', 'Store');
     });
 });
