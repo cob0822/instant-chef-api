@@ -6,6 +6,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Tymon\JWTAuth\Contracts\JWTSubject;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 
 // ログイン周りでApp\Userが必要なので中身同様のApp\Userが存在している
@@ -61,5 +62,13 @@ class User extends Authenticatable implements JWTSubject
     public function getJWTCustomClaims()
     {
         return [];
+    }
+
+    /**
+     * @return HasMany
+     */
+    public function orders()
+    {
+        return $this->hasMany(Order::class);
     }
 }
