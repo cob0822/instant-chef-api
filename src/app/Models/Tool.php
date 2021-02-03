@@ -11,6 +11,8 @@ class Tool extends Model
         'name',
     ];
 
+    protected $hidden = ['pivot'];
+
     /**
      * @return BelongsToMany
      */

@@ -11,6 +11,8 @@ class Ingredient extends Model
         'name',
     ];
 
+    protected $hidden = ['pivot'];
+
     /**
      * @return BelongsToMany
      */
