@@ -38,4 +38,7 @@ Route::middleware('auth:api')->group(function () {
         Route::get('/', 'Index');
         Route::post('/', 'Store');
     });
+    Route::prefix('categories')->namespace('Category')->group(function () {
+        Route::get('/', 'Index');
+    });
 });
