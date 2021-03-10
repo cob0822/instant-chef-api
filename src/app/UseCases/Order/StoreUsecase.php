@@ -48,8 +48,8 @@ class StoreUsecase
                 ]);
             }
         }
-        if ($request['tool']) {
-            foreach ($request['tool'] as $tool) {
+        if ($request['tools']) {
+            foreach ($request['tools'] as $tool) {
                 $tool = Tool::updateOrCreate(
                     [
                         'name' => $tool,
