@@ -37,6 +37,9 @@ Route::middleware('auth:api')->group(function () {
     Route::prefix('orders')->namespace('Order')->group(function () {
         Route::get('/', 'Index');
         Route::post('/', 'Store');
+        Route::prefix('detail')->namespace('Detail')->group(function () {
+            Route::get('/{order}', 'Index');
+        });
     });
     Route::prefix('categories')->namespace('Category')->group(function () {
         Route::get('/', 'Index');

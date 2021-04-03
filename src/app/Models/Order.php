@@ -18,6 +18,8 @@ class Order extends Model
         'desired_cooking_time',
     ];
 
+    protected $hidden = ['pivot'];
+
     /**
      * @return BelongsTo
      */

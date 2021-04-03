@@ -30,7 +30,7 @@ class StoreRequest extends FormRequest
             'cooking_frequency' => 'required|string',
             'categories.*' => 'number|nullable',
             'creation_time' => 'number|nullable',
-            'tool.*' => 'string|nullable|max:255',
+            'tools.*' => 'string|nullable|max:255',
             'ingredients.*' => 'string|nullable|max:255',
         ];
     }
